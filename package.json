@@ -1,0 +1,27 @@
+{
+  "name": "gittest",
+  "version": "1.0.0",
+  "description": "An attempt at using dependencies in JS",
+  "main": "code.js",
+  "dependencies": {
+    "react": "^16.1.1",
+    "save": "^2.3.1"
+  },
+  "devDependencies": {
+    "less": "^2.7.3"
+  },
+  "scripts": {
+    "styles": "lessc styles.less styles.css",
+    "test": "testGitTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeckanylander/jsgittest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebeckanylander/jsgittest/issues"
+  },
+  "homepage": "https://github.com/rebeckanylander/jsgittest#readme"
+}
