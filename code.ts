@@ -1,7 +1,8 @@
-let $ = require("jquery");
-let movieData = require("./data");
+import {movieData} from "./data";
+import {Review} from "./interfaces";
+import * as $ from "jquery";
 console.log(movieData);
-function renderMovie(movieData){
+function renderMovie(movieData : Review){
 	console.log(movieData);
 	var picture = $("#picture");
 	picture.attr("src", movieData.picUrl); // Bättre än picture.src = movieData.picUrl
@@ -19,7 +20,7 @@ function renderMovie(movieData){
 
 for(let i=1; i<=5; i++){
   let star = $("#star" + i);
-  star.click(function(){changeStarRating(i);});
+  star.click(()=>{changeStarRating(i);});
 }
 
 function changeStarRating(rating){

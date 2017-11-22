@@ -9,14 +9,17 @@
     "save": "^2.3.1"
   },
   "devDependencies": {
+    "@types/jquery": "^3.2.16",
     "less": "^2.7.3",
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.1",
     "webpack": "^3.8.1"
   },
   "scripts": {
     "styles": "lessc styles.less distribution/styles.css",
     "bundle": "webpack",
-	"copyindex": "cp index.html distribution/index.html",
-	"build": "npm run bundle && npm run styles && npm run copyindex"
+    "copyindex": "cp index.html distribution/index.html",
+    "build": "npm run bundle && npm run styles && npm run copyindex"
   },
   "repository": {
     "type": "git",

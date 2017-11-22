@@ -1,4 +1,5 @@
-module.exports = {
+import {Review} from "./interfaces";
+export const movieData: Review = {
 	title: "Circle",
 	description: "Circle is a very exciting movie about 30 strangers who are forced to kill each other off. While I cannot remember the ending of the movie, apparently that was very confusing." +
 	"One of the reasons I enjoyed Circle was that it experimented with the human psyche and what you would be willing to do under pressure.",
