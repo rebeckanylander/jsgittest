@@ -4,15 +4,19 @@
   "description": "An attempt at using dependencies in JS",
   "main": "code.js",
   "dependencies": {
+    "jquery": "^3.2.1",
     "react": "^16.1.1",
     "save": "^2.3.1"
   },
   "devDependencies": {
-    "less": "^2.7.3"
+    "less": "^2.7.3",
+    "webpack": "^3.8.1"
   },
   "scripts": {
-    "styles": "lessc styles.less styles.css",
-    "test": "testGitTest"
+    "styles": "lessc styles.less distribution/styles.css",
+    "bundle": "webpack",
+	"copyindex": "cp index.html distribution/index.html",
+	"build": "npm run bundle && npm run styles && npm run copyindex"
   },
   "repository": {
     "type": "git",

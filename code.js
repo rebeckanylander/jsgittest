@@ -1,23 +1,25 @@
-function renderMovie(movie){
+let $ = require("jquery");
+let movieData = require("./data");
+console.log(movieData);
+function renderMovie(movieData){
+	console.log(movieData);
 	var picture = $("#picture");
-	picture.attr("src", movie.picUrl); // Bättre än picture.src = movie.picUrl
+	picture.attr("src", movieData.picUrl); // Bättre än picture.src = movieData.picUrl
 	var movieTitle = $("#movieTitle");
-	movieTitle.text(movie.title);
+	movieTitle.text(movieData.title);
 	var movieDescription = $("#movieDescription");
-	movieDescription.text(movie.description);
+	movieDescription.text(movieData.description);
 	var actorsHeadline = $("#actorsHeadline");
-	actorsHeadline.text(movie.actorsHeadline);
+	actorsHeadline.text(movieData.actorsHeadline);
 	var actorsList = $("#actorsList");
-	for(let i in movie.actors){
-		actorsList.append("<li>"+movie.actors[i]+"</li>");
+	for(let i in movieData.actors){
+		actorsList.append("<li>"+movieData.actors[i]+"</li>");
 	}
 }
 
 for(let i=1; i<=5; i++){
   let star = $("#star" + i);
-  star.click(function(){
-    changeStarRating(i);
-  });
+  star.click(function(){changeStarRating(i);});
 }
 
 function changeStarRating(rating){
